@@ -4,9 +4,16 @@
 
 This is my attempt at recreating the "The Scoop" project from Codecademy's "Back-End Apps" course.
 
-This version is the unmodified version of the project, fresh from the zip file.
+This version is the version with all of the server logic handled and implemented.
 
-This version is implemented here for backup purposes. **I do not take credit for creating any file in the repository.**
+All of my work is inside the **script.js** file and it includes the functions:
+ + createComment
+ + updateComment
+ + deleteComment
+ + upvoteComment
+ + downvoteComment
+
+**I do not take credit for creating any other file in this repository.**
 
 Link for the original project : https://www.codecademy.com/paths/create-a-back-end-app-with-javascript/tracks/bapi-javascript-objects-modules-and-browser-compatibility/modules/the-scoop/informationals/the-scoop.
 
