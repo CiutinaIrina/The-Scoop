@@ -1,4 +1,23 @@
 // database is let instead of const to allow us to modify it in test.js
+
+/*Bonus: YAML Saving and Loading
+Currently every time you start and stop your server, your database object will get erased as it isn't being saved anywhere. There are many potential formats for saving the database
+object to ensure it is able to be restored. For this project, as a bonus, we encourage you to use YAML. You will write two functions, one that saves your database object to YAML
+after each server call, and another that loads the database object when the server starts. We have implemented the logic for calling these functions, it is your task to find
+appropriate JavaScript modules for this functionality and writing the following functions:
+
+loadDatabase
+Reads a YAML file containing the database and returns a JavaScript object representing the database
+
+saveDatabase
+Writes the current value of database to a YAML file
+
+Implementing this Bonus will be a tough challenge, as you'll probably have to use a new external library, and you may need to add to or edit the rather complicated requestHandler
+function that we have provided. We use Figg in our solution code, but you can implement saving and loading in many ways, so don't feel like you have to take the same approach that
+we did. */
+
+
+
 let database = {
   users: {},
   articles: {},
@@ -362,11 +381,23 @@ function downvote(item, username) {
   return item;
 }
 
-// Write all code above this line.
-
+// Write all code above this line
+const fs = require('fs');
 const http = require('http');
 const url = require('url');
+const yaml = require('js-yaml');
 const { Z_NO_FLUSH } = require('zlib');
+
+function loadDatabase () {
+  let fileContents = fs.readFileSync('./data.yaml', 'utf8');
+  let datas = yaml.load(fileContents);
+  return datas;
+}
+
+function saveDatabase(data) {
+  let yamlStr = yaml.dump(data);
+  fs.writeFileSync('data.yaml', yamlStr, 'utf8');
+}
 
 const port = process.env.PORT || 4000;
 const isTestMode = process.env.IS_TEST_MODE;

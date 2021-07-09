@@ -4,7 +4,7 @@
 
 This is my attempt at recreating the "The Scoop" project from Codecademy's "Back-End Apps" course.
 
-This version is the version with all of the server logic handled and implemented.
+This version is the version with every single task complete, from handling the server logic of the comments feature to the bonus task of updating databases using YAML.
 
 All of my work is inside the **script.js** file and it includes the functions:
  + createComment
@@ -12,6 +12,8 @@ All of my work is inside the **script.js** file and it includes the functions:
  + deleteComment
  + upvoteComment
  + downvoteComment
+ + loadData
+ + saveData
 
 **I do not take credit for creating any other file in this repository.**
 
