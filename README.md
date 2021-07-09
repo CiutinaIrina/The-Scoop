@@ -19,6 +19,8 @@ All of my work is inside the **script.js** file and it includes the functions:
 
 Link for the original project : https://www.codecademy.com/paths/create-a-back-end-app-with-javascript/tracks/bapi-javascript-objects-modules-and-browser-compatibility/modules/the-scoop/informationals/the-scoop.
 
+You can see the original README file down here.
+
 ## Project Overview
 
 In this project, you will build all of the routing and database logic for an article submission web app called The Scoop.
